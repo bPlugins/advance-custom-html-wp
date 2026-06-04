@@ -1,0 +1,51 @@
+{
+  "name": "advanced-custom-html",
+  "version": "2.1.0",
+  "description": "Advance Custom HTML lets you write and display HTML, CSS, PHP, and other code snippets on WordPress with live preview and syntax highlighting.",
+  "author": "bPlugins",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js",
+    "i18n-pot": "wp i18n make-pot . languages/advance-custom-html.pot --exclude=\"src,build,node_modules,advance-custom-html\" && cp ./languages/advance-custom-html.pot ./languages/advance-custom-html-en_US.po",
+    "i18n-json": "wp i18n make-json languages/ --no-purge",
+    "i18n-mo": "wp i18n make-mo languages/",
+    "i18n": "npm run i18n-pot && npm run i18n-json && npm run i18n-mo",
+    "bundle": "wp-scripts build && npm run i18n && gulp bundle && gulp plugin_zip"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.0.0",
+    "eslint-webpack-plugin": "^4.2.0",
+    "gulp": "^5.0.0",
+    "gulp-zip": "^6.0.0"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.7.0",
+    "@codemirror/gutter": "^0.19.9",
+    "@codemirror/lang-css": "^6.3.0",
+    "@codemirror/lang-html": "^6.4.9",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.34.1",
+    "@uiw/codemirror-extensions-basic-setup": "^4.23.5",
+    "@uiw/codemirror-theme-basic": "^4.23.5",
+    "@uiw/codemirror-theme-eclipse": "^4.23.5",
+    "@uiw/react-codemirror": "^4.23.5",
+    "codemirror": "^6.0.1",
+    "immer": "^10.1.1",
+    "react-draggable": "^4.4.6",
+    "react-router-dom": "^6.27.0"
+  }
+}

@@ -1,0 +1,40 @@
+.copyBtnType-tab, .copyBtnPosition-tab {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.text-btn,
+.icon-btn,
+.topRight-btn,
+.bottomRight-btn {
+  flex: 1;
+  padding: 6px;
+  text-align: center;
+  font-size: 15px;
+}
+.text-btn:hover,
+.icon-btn:hover,
+.topRight-btn:hover,
+.bottomRight-btn:hover {
+  background-color: #635bbc;
+  color: white;
+  cursor: pointer;
+}
+.text-btn, .topRight-btn {
+  border-right: 1px solid #ccc;
+}
+.text-btn.activeCopyBtnType,
+.icon-btn.activeCopyBtnType,
+.topRight-btn.activeCopyBtnPosition,
+.bottomRight-btn.activeCopyBtnPosition {
+  background-color: #635bbc;
+  color: white;
+}
+
+.text-btn-tab-item {
+  display: none;
+}
+.text-btn-tab-item.activeCopyBtnType {
+  display: block;
+}
