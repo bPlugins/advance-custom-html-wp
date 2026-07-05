@@ -4,7 +4,7 @@ Donate link: https://gum.co/wpdonate/
 Tags: block, code, custom HTML, code snippet, embed code
 Requires at least: 6.6+
 Tested up to: 7.0
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -215,6 +215,9 @@ Please report security bugs found in the source code of the Advance Custom HTML 
 
 
 == Changelog ==
+
+= 2.1.1 - 5 July 2026 =
+* **Update:** Updated modern dashboard layout and style.
 
 = 2.1.0 - 4 June 2026 =
 * **New:** Reorganized block settings with custom panel iconography.

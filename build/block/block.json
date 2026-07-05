@@ -2,7 +2,7 @@
   "apiVersion": 3,
   "name": "bplugins/custom-html",
   "title": "Advance Custom HTML",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Write, style, and display custom code snippets with a live preview and syntax highlighting.",
   "category": "widgets",
   "keywords": [

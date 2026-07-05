@@ -1,7 +1,7 @@
 const slug = 'advance-custom-html';
 
 export const dashboardInfo = (info) => {
-  const { version, isPremium, hasPro, licenseActiveNonce } = info;
+  const { version, isPremium, hasPro, adminUrl = '', licenseActiveNonce } = info;
 
   const proSuffix = isPremium ? ' Pro' : '';
 
@@ -13,12 +13,13 @@ export const dashboardInfo = (info) => {
     version,
     isPremium,
     hasPro,
+    adminUrl,
     displayOurPlugins: true,
     media: {
       logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
       banner: `https://ps.w.org/${slug}/assets/banner-772x250.png`,
       thumbnail: `https://bplugins.com/wp-content/themes/b-technologies/assets/images/products/${slug}.png`,
-      proThumbnail: `https://bplugins.com/wp-content/themes/b-technologies/assets/images/products/${slug}-pro.png`,
+      // proThumbnail: `https://bplugins.com/wp-content/themes/b-technologies/assets/images/products/${slug}-pro.png`,
       // video: 'https://www.youtube.com/watch?v=milYZrqLJsE',
       // isYoutube: true
     },
@@ -35,6 +36,13 @@ export const dashboardInfo = (info) => {
     },
     licenseActiveNonce,
     changelogs: [
+      {
+        version: "2.1.1 - 5 July 2026",
+        type: 'update',
+        list: [
+          "Update: Updated modern dashboard layout and style."
+        ],
+      },
       {
         version: "2.1.0 - 4 June 2026",
         type: 'new',
@@ -150,3 +158,44 @@ export const pricingInfo = {
     selected: 3, // choose from licenses item
   }
 }
+
+export const gutenbergTabIcon = (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round'>
+    <rect x='3' y='3' width='7' height='7' rx='1' />
+    <rect x='14' y='3' width='7' height='7' rx='1' />
+    <rect x='3' y='14' width='7' height='7' rx='1' />
+    <rect x='14' y='14' width='7' height='7' rx='1' />
+  </svg>
+);
+
+export const welcomeInfo = (adminUrl) => ({
+  keywords: ['Gutenberg Block', 'Code Snippets', 'Live Preview', 'Syntax Highlighting', 'Custom Themes', 'Front-end Editor'],
+  keywordsLabel: 'Features',
+  gettingStarted: {
+    tabs: [
+      {
+        key: 'gutenberg',
+        label: 'Gutenberg',
+        icon: gutenbergTabIcon,
+        steps: [
+          {
+            num: 1,
+            title: 'Insert the Block',
+            body: 'Click <strong>+</strong> in the Gutenberg editor and search for <strong>Advance Custom HTML</strong>.',
+            link: { url: `${adminUrl}post-new.php`, label: 'Open Editor' }
+          },
+          {
+            num: 2,
+            title: 'Add Your Code',
+            body: 'Write or paste your custom HTML, CSS, JavaScript, PHP, or other code snippets directly into the editor block.'
+          },
+          {
+            num: 3,
+            title: 'Live Preview & Customize',
+            body: 'Adjust themes, toggle wrap, line numbers, and styling from the block settings panel, then click <strong>Publish</strong>.'
+          }
+        ]
+      }
+    ]
+  }
+});

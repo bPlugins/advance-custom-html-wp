@@ -26,7 +26,8 @@ if (!class_exists('BPLACH_Admin_Menu')) {
     public function renderPage() {
       ?>
       <div id="bplAdminHelpPageWrapper" data-info='<?php echo esc_attr(wp_json_encode([
-        'version' => ACHB_VERSION
+        'version'  => ACHB_VERSION,
+        'adminUrl' => admin_url()
       ])); ?>'></div>
       <?php
     }

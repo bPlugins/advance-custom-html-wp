@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Advance Custom HTML
  * Description: Advance Custom HTML lets you write and display HTML, CSS, PHP, and other code snippets on WordPress with live preview and syntax highlighting. 
- * Version: 2.1.0
+ * Version: 2.1.1
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 if (function_exists('achb_fs')) {
 	achb_fs()->set_basename( true, __FILE__ );
 } else {
-	define('ACHB_VERSION', '2.1.0');
+	define('ACHB_VERSION', '2.1.1');
 	define('ACHB_DIR_URL', plugin_dir_url(__FILE__));
 	define('ACHB_DIR_PATH', plugin_dir_path(__FILE__));
 	define('ACHB_HAS_FREE', 'advance-custom-html/advance-custom-html.php' === plugin_basename(__FILE__));
