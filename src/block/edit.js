@@ -1,9 +1,7 @@
 import { css } from "@codemirror/lang-css";
 import { html } from "@codemirror/lang-html";
 import { javascript } from "@codemirror/lang-javascript";
-
 import CodeMirror, { EditorView } from "@uiw/react-codemirror";
-
 import { __ } from "@wordpress/i18n";
 import Settings from "./Components/Backend/Settings/Settings";
 import Styles from "./Components/Common/Styles";

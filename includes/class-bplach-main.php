@@ -14,6 +14,7 @@ if (!class_exists('BPLACH_Main')) {
 		}
 
 		private function includes() {
+			require_once ACHB_DIR_PATH . 'includes/BFCMCamping.php';
 			require_once ACHB_DIR_PATH . 'includes/class-bplach-admin-menu.php';
 		}
 
