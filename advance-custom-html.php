@@ -69,6 +69,29 @@ if (function_exists('achb_fs')) {
 		do_action('achb_fs_loaded');
 	}
 
+	add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), function( $links ) {
+		if ( current_user_can( 'manage_options' ) ) {
+			$links[] = '<a href="' . esc_url( admin_url( 'tools.php?page=advanced-custom-html' ) ) . '" style="color:#FF7A00;font-weight:bold;">' . esc_html__( 'Help & Demos', 'advance-custom-html' ) . '</a>';
+
+			$expiry     = class_exists( '\ACHB\Admin\ACHB_PromoBanner' ) ? \ACHB\Admin\ACHB_PromoBanner::EXPIRATION_DATE : '2026-12-05 23:59:59';
+			$is_expired = time() > strtotime( $expiry );
+
+			$is_premium = ( defined( 'ACHB_HAS_PRO' ) && ACHB_HAS_PRO ) || ( function_exists( 'achbIsPremium' ) && achbIsPremium() ) || ( function_exists( 'achb_fs' ) && achb_fs()->can_use_premium_code() );
+
+			if ( ! $is_expired && ! $is_premium ) {
+				$bfcm_url = 'https://bplugins.com/products/advance-custom-html/pricing/?utm_source=admin&utm_medium=plugins&utm_campaign=bfcm2026';
+				$links[]  = '<a href="' . esc_url( $bfcm_url ) . '" target="_blank" rel="noopener noreferrer" style="color:#d63638;font-weight:bold;">' . esc_html__( 'Upgrade to Pro & Save 45% This Black Friday!', 'advance-custom-html' ) . '</a>';
+			}
+		}
+
+		return $links;
+	} );
+
+	// Black Friday / Cyber Monday Campaign Banner
+	if ( ACHB_HAS_FREE && ! ACHB_HAS_PRO ) {
+		require_once ACHB_DIR_PATH . 'includes/BFCMCamping.php';
+	}
+
 	// Main Plugin Logic
 	require_once ACHB_DIR_PATH . 'includes/class-bplach-main.php';
 	new BPLACH_Main();

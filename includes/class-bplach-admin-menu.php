@@ -24,6 +24,9 @@ if (!class_exists('BPLACH_Admin_Menu')) {
     }
 
     public function renderPage() {
+      if ( class_exists( '\ACHB\Admin\ACHB_PromoBanner' ) ) {
+        \ACHB\Admin\ACHB_PromoBanner::render_banner();
+      }
       ?>
       <div id="bplAdminHelpPageWrapper" data-info='<?php echo esc_attr(wp_json_encode([
         'version'  => ACHB_VERSION,
