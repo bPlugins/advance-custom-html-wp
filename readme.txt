@@ -1,10 +1,10 @@
 === Advance Custom HTML - Show Live Code, Share Snippets, Embed Code, and Style Them Your Way. ===
-Contributors: bplugins, abuhayat, taninrahman, shehabulislam, freemius
+Contributors: bplugins, abuhayat, freemius, sojibislam9878
 Donate link: https://gum.co/wpdonate/
 Tags: block, code, custom HTML, code snippet, embed code
 Requires at least: 6.6+
 Tested up to: 7.0
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -215,6 +215,9 @@ Please report security bugs found in the source code of the Advance Custom HTML 
 
 
 == Changelog ==
+
+= 2.1.2 - 17 November 2026 =
+* Added: Black Friday & Cyber Monday seasonal campaign banner with special upgrade offers.
 
 = 2.1.1 - 5 July 2026 =
 * **Update:** Updated modern dashboard layout and style.

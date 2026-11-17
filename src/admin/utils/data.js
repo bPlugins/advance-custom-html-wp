@@ -37,6 +37,13 @@ export const dashboardInfo = (info) => {
     licenseActiveNonce,
     changelogs: [
       {
+        version: "2.1.2 - 17 November 2026",
+        type: 'new',
+        list: [
+          "Added: Black Friday & Cyber Monday seasonal campaign banner with special upgrade offers."
+        ],
+      },
+      {
         version: "2.1.1 - 5 July 2026",
         type: 'update',
         list: [
